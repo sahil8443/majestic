@@ -1,0 +1,10 @@
+*
+!index.html
+!sample-simple.css
+!sample-simple.js
+!Screenshot*.png
+!vercel.json
+!README.md
+!.gitignore
+!.git/
+!.github/
