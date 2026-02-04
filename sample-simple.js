@@ -2,6 +2,20 @@
 // MAJESTIC REALTIES - SIMPLIFIED JAVASCRIPT
 // ============================================
 
+// 0. HERO SLIDER - Rotate background images
+function initHeroSlider() {
+    const slides = document.querySelectorAll('.hero-slide');
+    if (slides.length === 0) return;
+    
+    let currentSlide = 0;
+    
+    setInterval(() => {
+        slides.forEach(slide => slide.classList.remove('active'));
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }, 4000); // Change image every 4 seconds
+}
+
 // 1. FAQ ACCORDION - Toggle question/answer
 function initFAQ() {
     const faqItems = document.querySelectorAll('.faq-item');
@@ -61,6 +75,7 @@ function initForm() {
 
 // 4. INITIALIZE ON PAGE LOAD
 document.addEventListener('DOMContentLoaded', () => {
+    initHeroSlider();
     initFAQ();
     initNavigation();
     initForm();
